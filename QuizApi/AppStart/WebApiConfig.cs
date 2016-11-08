@@ -17,9 +17,7 @@ namespace QuizApi.AppStart
             config.Formatters.JsonFormatter.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
 
             // Web API routes            
-            config.MapHttpAttributeRoutes(new CentralizedPrefixProvider("api/v{version:int}"));
-
-            BuildSuccessNotification.Notify().Wait();
+            config.MapHttpAttributeRoutes(new CentralizedPrefixProvider("api/v{version:int}"));            
         }
 
         private class AssembliesResolver : IAssembliesResolver

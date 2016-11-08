@@ -15,4 +15,11 @@ export class DemoService {
             .toPromise()
             .then(response => JSON.parseWithDate(response.text())); 
     }
+
+    notifyBuildSuccess() : Promise<any> {
+       const url = `${this.apiUrl}buildsuccess`;
+        return this.http.get(url, { body: "" })
+            .toPromise()
+            .then(response => response.text()); 
+    }
 }

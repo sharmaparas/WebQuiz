@@ -244,3 +244,5 @@ ModelManifest.xml
 /WebQuiz/js
 /WebQuiz/fonts
 /WebQuiz/typings
+/WebQuiz/app/**/*.js
+/WebQuiz/app/**/*.map

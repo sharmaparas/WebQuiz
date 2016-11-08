@@ -22,6 +22,11 @@ var DefaultComponent = (function () {
     };
     DefaultComponent.prototype.ngOnInit = function () {
         this.getTimeFromServer();
+        this.demoService.notifyBuildSuccess().then(function () {
+            console.info("Build notified");
+        }).catch(function () {
+            console.error("Build notification error");
+        });
     };
     DefaultComponent = __decorate([
         core_1.Component({

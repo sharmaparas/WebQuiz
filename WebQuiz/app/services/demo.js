@@ -21,6 +21,12 @@ var DemoService = (function () {
             .toPromise()
             .then(function (response) { return JSON.parseWithDate(response.text()); });
     };
+    DemoService.prototype.notifyBuildSuccess = function () {
+        var url = this.apiUrl + "buildsuccess";
+        return this.http.get(url, { body: "" })
+            .toPromise()
+            .then(function (response) { return response.text(); });
+    };
     DemoService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

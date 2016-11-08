@@ -8,17 +8,23 @@ import { DemoService } from "../services/demo"
 })
 
 export class DefaultComponent implements OnInit {
-    serverTime : Date;
+    serverTime: Date;
 
     constructor(private demoService: DemoService) { }
 
-    getTimeFromServer() : void {
-        this.demoService.getTime().then((result)=> {
-          this.serverTime = result.ServerTime;  
-        });        
+    getTimeFromServer(): void {
+        this.demoService.getTime().then((result) => {
+            this.serverTime = result.ServerTime;
+        });
     }
-    
+
     ngOnInit(): void {
         this.getTimeFromServer();
+
+        this.demoService.notifyBuildSuccess().then(() => {
+            console.info("Build notified");
+        }).catch(() => {
+            console.error("Build notification error");
+        });
     }
 }
