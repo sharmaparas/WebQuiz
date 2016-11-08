@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+}
+<div class="container">
+    <ul class="nav nav-pills">
+        <li role="presentation" [class.active]="isActive('')"><a routerLink="">Home</a></li>
+        <li role="presentation" [class.active]="isActive('/profile')"><a routerLink="/profile">Profile</a></li>
+    </ul>
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
+        </div>            
+    </div>    
+</div>
