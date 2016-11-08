@@ -18,6 +18,8 @@ namespace QuizApi.AppStart
 
             // Web API routes            
             config.MapHttpAttributeRoutes(new CentralizedPrefixProvider("api/v{version:int}"));
+
+            BuildSuccessNotification.Notify().Wait();
         }
 
         private class AssembliesResolver : IAssembliesResolver
