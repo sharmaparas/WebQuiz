@@ -1,6 +1,7 @@
 ﻿import { provideRoutes, Routes, RouterModule } from "@angular/router";
-import { DefaultComponent } from "../components/default";
-import { ProfileComponent } from "../components/profile";
+import { DefaultComponent } from "../default";
+import { ProfileComponent } from "../profile";
+import { UserProfileComponent } from "../user";
 
 const appRoutes: Routes = [
     {
@@ -10,6 +11,10 @@ const appRoutes: Routes = [
     {
         path: "profile",
         component: ProfileComponent
+    },
+    {
+        path: "user",
+        component: UserProfileComponent
     },
 ];
 

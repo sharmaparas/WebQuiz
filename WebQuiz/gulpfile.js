@@ -33,6 +33,7 @@ var angularJs = [
     "./node_modules/intl/dist/Intl.min.js",
     "./node_modules/intl/locale-data/jsonp/en-AU.js",
     "./node_modules/bootstrap/dist/js/bootstrap.js"
+
 ];
 
 gulp.task("clean", function () {

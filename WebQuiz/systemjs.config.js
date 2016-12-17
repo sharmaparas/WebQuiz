@@ -24,10 +24,19 @@
             // other libraries
             'rxjs': "npm:rxjs",
             'ts': "npm:plugin-typescript/lib/plugin.js",
-            'typescript': "npm:typescript/lib/typescript.js"            
+            'typescript': "npm:typescript/lib/typescript.js",
+            // ag libraries
+            'ag-grid': 'node_modules/ag-grid',
+            'ag-grid-ng2': 'node_modules/ag-grid-ng2'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
+            'ag-grid-ng2': {
+                defaultExtension: "js"
+            },
+            'ag-grid': {
+                defaultExtension: "js"
+            },
             app: {
                 main: "./main.js",
                 defaultExtension: "js"

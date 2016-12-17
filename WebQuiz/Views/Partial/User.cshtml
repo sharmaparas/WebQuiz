@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+    <h3>User Component</h3>
+<div>
+    <div>
+        <label>Search</label>
+        <input type="search" [value]="search" (input)="search=$event.target.value" placeholder="Enter Name or Email" (keyup)="filterUsers($event)">
+        <br />
+        <br />
+    </div><div>
+    <label>Sort By</label>
+    <select class="media-list" [value]="sort" (input)="sort=$event.target.value" (change)="filterUsers($event)">
+        <option selected value="ID">ID</option>
+        <option value="FirstName">First Name</option>
+        <option value="LastName">Last Name</option>
+        <option value="DOB">Date Of Birth</option>
+        <option value="Email">Email</option>
+        <option value="Salary">Salary</option>
+    </select>
+    <br />
+    <br />
+</div>
+    <table class="table">
+        <tr class="row">
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>D.O.B</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+        <tr *ngFor='let a of arr' class="row">
+            <td>{{a.Id}}</td>
+            <td>{{a.FirstName}}</td>
+            <td>{{a.LastName}}</td>
+            <td>{{a.DateOfBirth}}</td>
+            <td>{{a.Email}}</td>
+            <td>{{a.Salary}}</td>
+        </tr>
+    </table>
+</div>

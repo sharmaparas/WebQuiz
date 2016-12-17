@@ -1,5 +1,7 @@
-﻿import { Component, NgZone, OnInit, ViewChild, OnDestroy } from "@angular/core";
+﻿/// <reference path="main.ts" />
+import { Component, NgZone, OnInit, ViewChild, OnDestroy, Pipe } from "@angular/core";
 import { Router } from "@angular/router";
+import {AgGridNg2} from "ag-grid-ng2/main";
 
 @Component({
     selector: "my-app",

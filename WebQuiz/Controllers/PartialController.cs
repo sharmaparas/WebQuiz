@@ -11,13 +11,17 @@ namespace WebQuiz.Controllers
         }
 
         // GET: Partial
-        public ActionResult Default()
+        public ActionResult Profile()
+        {
+            return View();
+        }
+        public ActionResult User()
         {
             return View();
         }
 
         // GET: Partial
-        public ActionResult Profile()
+        public ActionResult Default()
         {
             return View();
         }
